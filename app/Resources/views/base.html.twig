@@ -2,12 +2,23 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Gîte{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+		<div id="container">
+			<header>
+				<a href="{{ path('gite_main_homepage') }}" title="Retour à l'accueil">Accueil</a>
+			</header>
+			<nav>
+			</nav>
+			<div id="content">
+				{% block content %}{% endblock %}
+			</div>
+			<footer>
+			</footer>
+		</div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

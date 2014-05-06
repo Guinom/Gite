@@ -1,0 +1,4 @@
+gite_main:
+    resource: "@GiteMainBundle/Resources/config/routing.yml"
+    prefix:   /
+

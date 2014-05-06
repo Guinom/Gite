@@ -1,0 +1,3 @@
+gite_main_homepage:
+    pattern:  /
+    defaults: { _controller: GiteMainBundle:Home:index }
