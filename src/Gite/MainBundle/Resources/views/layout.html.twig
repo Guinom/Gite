@@ -10,7 +10,10 @@
     <body>
         <div id="container">
             <header>
-                <a href="{{ path('homepage') }}" title="Retour à l'accueil">Tutoriel Symfony2</a>
+				<ul>
+					<li><a href="{{ path('homepage') }}" title="Retour à l'accueil">Tutoriel Symfony2</a></li>
+					<li><a href="{{ path('homepage') }}" title="Retour à l'accueil">Tutoriel Symfony2</a></li>
+				</ul>
                 <p>
 					{% for key, flash in app.session.flashBag.get('notice') %}
 						{% if flash %}

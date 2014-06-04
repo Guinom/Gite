@@ -3,15 +3,27 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Gîte{% endblock %}</title>
+		{% stylesheets '@GiteMainBundle/Resources/public/css/*' filter='cssrewrite' %}
+			<link rel="stylesheet" href="{{ asset_url }}" />
+		{% endstylesheets %}
         {% block stylesheets %}{% endblock %}
+		<!--[if lte IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
 		<div id="container">
-			<header>
-				<a href="{{ path('gite_main_homepage') }}" title="Retour à l'accueil">Accueil</a>
+			<header id='header'>
 			</header>
 			<nav>
+				<ul>
+					<li><a href="{{ path('gite_main_homepage') }}" title="Retour à l'accueil">Accueil</a></li>
+					<li><a href="{{ path('gite_main_photos') }}" title="Photos">Photos</a></li>
+					<li><a href="{{ path('gite_main_region') }}" title="Région">Région</a></li>
+					<li><a href="{{ path('gite_main_dispo') }}" title="Disponibilités & Tarifs">Disponibilités & Tarifs</a></li>
+					<li><a href="{{ path('gite_main_contact') }}" title="Contact">Contact</a></li>
+				</ul>
 			</nav>
 			<div id="content">
 				{% block content %}{% endblock %}

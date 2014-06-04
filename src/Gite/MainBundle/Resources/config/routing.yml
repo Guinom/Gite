@@ -1,3 +1,19 @@
 gite_main_homepage:
     pattern:  /
     defaults: { _controller: GiteMainBundle:Home:index }
+
+gite_main_photos:
+    pattern:  /photos
+    defaults: { _controller: GiteMainBundle:Home:photos }
+
+gite_main_region:
+    pattern:  /region
+    defaults: { _controller: GiteMainBundle:Home:region }
+
+gite_main_dispo:
+    pattern:  /dispo
+    defaults: { _controller: GiteMainBundle:Home:dispo }
+
+gite_main_contact:
+    pattern:  /contact
+    defaults: { _controller: GiteMainBundle:Contact:index }
